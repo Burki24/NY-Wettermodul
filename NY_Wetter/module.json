@@ -1,0 +1,16 @@
+{
+    "id": "{10C262AC-83AE-6360-D4CB-CEA45EF21F91}",
+    "name": "NY_Wetter",
+    "type": 3,
+    "vendor": "Burki24",
+    "aliases": [],
+    "parentRequirements": [
+        "{D4C1D08F-CD3B-494B-BE18-B36EF73B8F43}"
+    ],
+    "childRequirements": [],
+    "implemented": [
+        "{018EF6B5-AB94-40C6-AA53-46943E824ACF}"
+    ],
+    "prefix": "NYW",
+    "url": "https://github.com/Burki24/NY-Wettermodul"
+}

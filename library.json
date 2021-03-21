@@ -1,0 +1,12 @@
+{
+    "id": "{E38EBC31-7D37-1336-CC25-3B89C7C93598}",
+    "name": "NY_Wetterdaten",
+    "author": "Burkhard Kneiseler",
+    "url": "https://github.com/Burki24/NY-Wettermodul",
+    "compatibility": {
+        "version": "5.2"
+    },
+    "version": "1.0",
+    "build": 1,
+    "date": 21
+}
