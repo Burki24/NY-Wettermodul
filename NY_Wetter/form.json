@@ -1,27 +1,22 @@
 {
-    "elements": [],
+    "elements": [
+        {
+            "type": "NumberSpinner", "name": "Longitude", "caption": "Longitude", "digits": 4 
+        }   
+        {
+            "type": "NumberSpinner", "name": "Latitude", "caption": "Latituge", "digits":4
+        }
+        {
+            "type": "ValidationTextBox", "name": "Ort", "caption": "Ort"
+        }
+    ],
     "actions": [
         {
-            "name": "RequestMethod",
-            "type": "ValidationTextBox",
-            "caption": "Reques Method"
+            "name": "Update Wetterdaten",
+            "type": "Button",
+            "caption": "Update"
         },
-        {
-            "name": "RequestURL",
-            "type": "ValidationTextBox",
-            "caption": "Request URL"
-        },
-        {
-            "name": "RequestData",
-            "type": "ValidationTextBox",
-            "caption": "Request Data"
-        },
-        {
-            "name": "Timeout",
-            "type": "NumberSpinner",
-            "caption": "Timeout"
-        },
-        {
+                {
             "type": "Button",
             "caption": "Send",
             "onClick": "NYW_Send($id, $RequestMethod, $RequestURL, $RequestData, $Timeout);"
