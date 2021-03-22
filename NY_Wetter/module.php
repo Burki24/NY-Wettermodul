@@ -11,8 +11,8 @@ declare(strict_types=1);
 			$this->RequireParent('{4CB91589-CE01-4700-906F-26320EFCF6C4}');
 
 
-			$this->RegisterPropertyInteger('Longitude', '');
-			$this->RegisterPropertyInteger('Latitude', '');
+			$this->RegisterProperty('Longitude', '');
+			$this->RegisterProperty('Latitude', '');
 			$this->RegisterPropertyString('Name', '');
 		}
 
