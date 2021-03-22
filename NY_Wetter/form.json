@@ -16,11 +16,7 @@
             "type": "Button",
             "caption": "Update"
         },
-                {
-            "type": "Button",
-            "caption": "Send",
-            "onClick": "NYW_Send($id, $RequestMethod, $RequestURL, $RequestData, $Timeout);"
-        }
+               
     ],
     "status": []
 }
