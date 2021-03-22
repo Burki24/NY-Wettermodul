@@ -1,22 +1,13 @@
 {
-    "elements": [
-        {
-            "type": "NumberSpinner", "name": "Longitude", "caption": "Longitude", "digits": 4 
-        },   
-        {
-            "type": "NumberSpinner", "name": "Latitude", "caption": "Latituge", "digits":4
-        },
-        {
-            "type": "ValidationTextBox", "name": "Ort", "caption": "Ort"
-        }
+    "elements": 
+    [
+        {"type": "NumberSpinner", "name": "Longitude", "caption": "Longitude", "digits": 4},   
+        {"type": "NumberSpinner", "name": "Latitude", "caption": "Latituge", "digits":4},
+        {"type": "ValidationTextBox", "name": "Ort", "caption": "Ort"}
     ],
-    "actions": [
-        {
-            "name": "Update Wetterdaten",
-            "type": "Button",
-            "caption": "Update"
-        },
-               
-    ],
-    "status": []
+
+    "actions":
+    [
+        {"name": "Update Wetterdaten", "type": "Button", "caption": "Update"}
+    ]
 }
