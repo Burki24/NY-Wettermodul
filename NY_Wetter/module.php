@@ -35,23 +35,24 @@ declare(strict_types=1);
 
 		public function Send(string $RequestMethod, string $RequestURL, string $RequestData, int $Timeout)
 		{
-
-			//$this->SendDebug('SetReceiveDataFilter - lot', $Lot, 0);
-			//$this->SendDebug('SetReceiveDataFilter - lat', $lat, 0);
-			//$this->SendDebug('SetReceiveDataFilter - nam', $nam, 0);
-
-
-		//	$this->SendDataToParent(json_encode(['DataID' => '{D4C1D08F-CD3B-494B-BE18-B36EF73B8F43}', "RequestMethod" => $RequestMethod, "RequestURL" => $RequestURL, "RequestData" => $RequestData, "Timeout" => $Timeout]));
 		}
 
 		public function ReceiveData($JSONString)
 		{
+				// create curl resource
+			$ch = curl_init();
 
-			//$this->SetReceiveDataFilter('.*' . $lot . '.*');
-			//$this->SetReceiveDataFilter('.*' . $lat . '.*');
-			//$this->SetReceiveDataFilter('.*' . $nam . '.*');
+		// url setzen
+			curl_setopt($ch, CURLOPT_URL, "https://api.met.no/weatherapi/locationforecast/2.0/complete?lat=$lat&lon=$lot");
 
-		//	$data = json_decode($JSONString);
-		//	IPS_LogMessage('Device RECV', utf8_decode($data->Buffer . ' - ' . $data->RequestMethod . ' - ' . $data->RequestURL . ' - ' . $data->RequestData . ' - ' . $data->Timeout));
+		// daten als String setzen und Browser vorgeben
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch,CURLOPT_USERAGENT,'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13');
+
+			$JSONString = curl_exec($ch); // $JSONString beinhaltet den String
+
+			curl_close($ch); // curl schliessen zwecks Speicher-Entlastung
+			$data = json_decode($JSONString);  // String in array wandeln
+			
 		}
 	}
